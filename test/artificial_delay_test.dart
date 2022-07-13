@@ -7,8 +7,8 @@ void main() {
     final maxMs = 1000;
 
     final artificialDelay = ArtificialDelay(
-        minDelay: Duration(milliseconds: minMs),
-        maxDelay: Duration(milliseconds: maxMs),
+      minDelay: Duration(milliseconds: minMs),
+      maxDelay: Duration(milliseconds: maxMs),
     );
 
     final delayMs = await artificialDelay.trigger();
