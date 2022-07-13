@@ -28,7 +28,7 @@ class ArtificialDelay {
     }
   }
 
-  /// Generate a random integer from [min] to [max], inclusive
+  /// Generate a random integer from [min] to [max], inclusive.
   int _getRandomInRange(int min, int max) =>
       min + _random.nextInt(max + 1 - min);
 

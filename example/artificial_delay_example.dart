@@ -1,8 +1,8 @@
 import 'package:artificial_delay/artificial_delay.dart';
 
 final artificialDelay = ArtificialDelay(
-  minDelay: Duration(milliseconds: 100),
-  maxDelay: Duration(milliseconds: 1000),
+  minDelay: const Duration(milliseconds: 100),
+  maxDelay: const Duration(milliseconds: 1000),
 );
 
 Future<List<int>> getIntsFromServer() async {

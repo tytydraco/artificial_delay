@@ -1,6 +1,6 @@
 name: artificial_delay
 description: A dart package to simulate artificial delays from volatile data providers.
-version: 1.0.0
+version: 1.0.1
 repository: https://www.github.com/tytydraco/artificial_delay
 
 environment:
@@ -11,4 +11,4 @@ environment:
 
 dev_dependencies:
   lints: ^2.0.0
-  test: ^1.16.0
+  test: ^1.21.4

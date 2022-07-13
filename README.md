@@ -17,9 +17,9 @@ Simply add `artificial_delay` to your `pubspec.yaml` using `dart pub add artific
 import 'package:artificial_delay/artificial_delay.dart';
 
 final artificialDelay = ArtificialDelay(
-  minDelay: Duration(milliseconds: 100),
-  maxDelay: Duration(milliseconds: 1000),
+  minDelay: const Duration(milliseconds: 100),
+  maxDelay: const Duration(seconds: 1),
 );
 
-artificialDelay.trigger();
+await artificialDelay.trigger();
 ```
