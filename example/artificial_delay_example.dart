@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:artificial_delay/artificial_delay.dart';
 
 final artificialDelay = ArtificialDelay(
@@ -6,11 +8,14 @@ final artificialDelay = ArtificialDelay(
 );
 
 Future<List<int>> getIntsFromServer() async {
-  await artificialDelay.trigger().then((value) => print('Took: $value ms'));
+  await artificialDelay
+      .trigger()
+      .then((value) => stdout.writeln('Took: $value ms'));
   return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]..shuffle();
 }
 
 Future<void> main() async {
-  print('Fetching list of ints from server...');
-  getIntsFromServer().then((value) => print('Received: $value'));
+  stdout.writeln('Fetching list of ints from server...');
+  final results = await getIntsFromServer();
+  stdout.writeln('Received: $results');
 }

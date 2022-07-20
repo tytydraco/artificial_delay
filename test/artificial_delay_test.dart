@@ -3,12 +3,12 @@ import 'package:test/test.dart';
 
 void main() {
   test('Random delay and return', () async {
-    final minMs = 100;
-    final maxMs = 1000;
+    const minMs = 100;
+    const maxMs = 1000;
 
     final artificialDelay = ArtificialDelay(
-      minDelay: Duration(milliseconds: minMs),
-      maxDelay: Duration(milliseconds: maxMs),
+      minDelay: const Duration(milliseconds: minMs),
+      maxDelay: const Duration(milliseconds: maxMs),
     );
 
     final delayMs = await artificialDelay.trigger();
