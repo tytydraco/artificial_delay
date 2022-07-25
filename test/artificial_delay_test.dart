@@ -7,8 +7,8 @@ void main() {
     const maxMs = 1000;
 
     final artificialDelay = ArtificialDelay(
-      minDelay: const Duration(milliseconds: minMs),
-      maxDelay: const Duration(milliseconds: maxMs),
+      const Duration(milliseconds: minMs),
+      const Duration(milliseconds: maxMs),
     );
 
     final delayMs = await artificialDelay.trigger();

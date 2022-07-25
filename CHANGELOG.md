@@ -1,3 +1,8 @@
+## 1.0.3
+
+* Use exclusive range
+* Use positional arguments
+
 ## 1.0.2
 
 * Follow Very Good Analysis guidelines

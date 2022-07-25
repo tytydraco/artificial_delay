@@ -4,11 +4,11 @@ import 'dart:math';
 /// A class to create artificial delays given a [minDelay] and [maxDelay].
 class ArtificialDelay {
   /// Create a new [ArtificialDelay] with the delay range being between
-  /// [minDelay] and [maxDelay], inclusive.
-  ArtificialDelay({
-    required this.minDelay,
-    required this.maxDelay,
-  }) {
+  /// [minDelay] and [maxDelay].
+  ArtificialDelay(
+    this.minDelay,
+    this.maxDelay,
+  ) {
     if (minDelay > maxDelay) {
       throw ArgumentError('minDelay must be less than or equal to maxDelay');
     }
@@ -30,9 +30,8 @@ class ArtificialDelay {
 
   final _random = Random();
 
-  /// Generate a random integer from [min] to [max], inclusive.
-  int _getRandomInRange(int min, int max) =>
-      min + _random.nextInt(max + 1 - min);
+  /// Generate a random integer from [min] to [max].
+  int _getRandomInRange(int min, int max) => min + _random.nextInt(max - min);
 
   /// Trigger a randomized delay.
   Future<int> trigger() async {
